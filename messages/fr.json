@@ -1,5 +1,8 @@
 {
     "Home": {
         "title": "Bonjour world"
+    }, "locale": {
+        "fr": "français",
+        "en": "anglais"
     }
 }

@@ -1,5 +1,9 @@
 {
     "Home": {
         "title": "Hello world"
+    },
+    "locale": {
+        "fr": "french",
+        "en": "english"
     }
 }
