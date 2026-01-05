@@ -1,7 +1,8 @@
-import LocaleSwitcher from "@/src/components/LocaleSwitcher";
+import LocaleSwitcher from "@/src/components/Switchers/LocaleSwitcher";
 import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import LogoIcon from "@/src/assets/icon.svg";
 
 export default async function Home({ params }: PageProps<"/[locale]">) {
     const { locale } = await params;
@@ -11,21 +12,22 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
     const t = await getTranslations("Home");
 
     return (
-        <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-            <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-                <LocaleSwitcher />
-                <Image
-                    className="dark:invert"
-                    src="/next.svg"
-                    alt="Next.js logo"
-                    width={100}
-                    height={20}
-                    priority
-                />
-                <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-                    <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-                        {t("title")}
-                    </h1>
+        <div className="flex min-h-screen items-center justify-center  font-sans">
+            <main className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16">
+                <div className="flex items-center justify-between ">
+                    <div className="flex flex-col items-start gap-6 ">
+                        <div className="font-title flex-none">
+                            <h1 className="flex flex-col gap-5 items-start">
+                                <div className="text-5xl">{t("title")}</div>
+                                <div className="text-8xl">Theo Cherblanc</div>
+                            </h1>
+                        </div>
+                        <h2 className="text-2xl max-w-xl">{t("subtitle")}</h2>
+                    </div>
+                    <div className="relative w-[800px] h-[800px] flex items-center justify-center">
+                        <div className="absolute bg-white rounded-full w-[700px] h-[700px] z-1"></div>
+                        <LogoIcon className="text-black z-2" />
+                    </div>
                 </div>
             </main>
         </div>

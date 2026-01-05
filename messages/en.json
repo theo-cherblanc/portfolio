@@ -1,9 +1,15 @@
 {
     "Home": {
-        "title": "Hello world"
+        "title": "Hello and welcome, I am",
+        "subtitle": "As a passionate web developer, I design effective and aesthetically pleasing digital solutions tailored to your needs."
     },
     "locale": {
         "fr": "french",
         "en": "english"
+    }, 
+    "Common" : {
+        "about": "About me",
+        "projects": "Projects",
+        "contact": "Contact"
     }
 }
