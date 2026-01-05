@@ -4,6 +4,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/src/i18n/routing";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
+import NavBar from "@/src/components/NavBar/NavBar";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -26,7 +27,10 @@ export default async function LocaleLayout({ children, params }: Props) {
     return (
         <html lang={locale}>
             <body>
-                <NextIntlClientProvider>{children}</NextIntlClientProvider>
+                <NextIntlClientProvider>
+                    <NavBar />
+                    {children}
+                </NextIntlClientProvider>
             </body>
         </html>
     );

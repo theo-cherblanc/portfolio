@@ -1,8 +1,14 @@
 {
     "Home": {
-        "title": "Bonjour world"
+        "title": "bonjour et bienvenue je suis",
+        "subtitle": "Développeur web passionné, je conçois des solutions digitales efficaces et esthétiques, pensées pour vos besoins"
     }, "locale": {
         "fr": "français",
         "en": "anglais"
+    },
+    "Common" : {
+        "about": "À propos",
+        "projects": "Projets",
+        "contact": "Contact"
     }
 }

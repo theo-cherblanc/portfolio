@@ -1,0 +1,37 @@
+.ThemeSwitcher {
+    width: 50px;
+    border: 1px solid var(--color-foreground);
+    height: 28px;
+    border-radius: 100px;
+    position: relative;
+    background: none;
+    z-index: 2;
+    transition: border .8s ease, transform .2s cubic-bezier(.35, .65, .5, 2.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+}
+
+.ThemeSwitcher:hover {
+    transform: scale(1.05);
+} 
+
+.ThemeSwitcher:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--color-foreground);
+    border-radius: 100%;
+    transition: all .2s cubic-bezier(.5, 0, .5, 1.5);
+    z-index: 2;
+}
+
+.ThemeSwitcher_switched:before{
+    right: 25px;
+    background-color: var(--color-foreground);
+}
