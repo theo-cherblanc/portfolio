@@ -54,5 +54,11 @@
         "e-commerce": "E-commerce",
         "thelia": "thelia",
         "fullstack": "fullstack"
+    },
+    "Metadata" : {
+        "layout_title" : "Theo Cherblanc – Développeur web & portfolio",
+        "layout_description" : "Découvrez les projets et réalisations de Theo Cherblanc, développeur web spécialisé en applications web modernes et expériences utilisateur.",
+        "projects_title" : "Projets – Theo Cherblanc, développeur web",
+        "projects_description" : "Découvrez les projets réalisés par Theo Cherblanc : applications web, interfaces interactives et solutions digitales créatives."
     }
 }

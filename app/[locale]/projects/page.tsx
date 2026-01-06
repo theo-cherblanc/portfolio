@@ -1,9 +1,29 @@
-import { Locale } from "next-intl";
+import { hasLocale, Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import ProjectCard from "@/src/components/Cards/ProjectCard/ProjectCard";
 import Button from "@/src/components/Buttons/Button";
 import LogoIcon from "@/src/assets/icon.svg";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { routing } from "@/src/i18n/routing";
+
+type Props = {
+    children: React.ReactNode;
+    params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params;
+    setRequestLocale(locale as Locale);
+    const t = await getTranslations("Metadata");
+    if (!hasLocale(routing.locales, locale)) notFound();
+
+    return {
+        title: t("projects_title"),
+        description: t("projects_description"),
+    };
+}
 
 export default async function Projects({ params }: PageProps<"/[locale]">) {
     const { locale } = await params;

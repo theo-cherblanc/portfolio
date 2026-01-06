@@ -56,5 +56,11 @@
         "thelia": "thelia",
         "fullstack": "fullstack"
 
+    },
+    "Metadata" : {
+        "layout_title" : "Theo Cherblanc – Web Developer & Portfolio",
+        "layout_description" : "Explore the projects and work of Theo Cherblanc, a web developer specializing in modern web applications and user experiences.",
+        "projects_title" : "Projects – Theo Cherblanc, Web Developer",
+        "projects_description" : "Explore the projects by Theo Cherblanc: web applications, interactive interfaces, and creative digital solutions."
     }
 }
