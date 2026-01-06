@@ -1,7 +1,31 @@
 {
     "Home": {
         "title": "bonjour et bienvenue je suis",
-        "subtitle": "Développeur web passionné, je conçois des solutions digitales efficaces et esthétiques, pensées pour vos besoins"
+        "subtitle": "Développeur web passionné, je conçois des solutions digitales efficaces et esthétiques, pensées pour vos besoins",
+        "completed_projects" : "projets accomplis",
+        "years_experience": "années d'expérience",
+        "all_projects": "tous mes projets",
+        "need": "besoin d'une",
+        "interface": "interface",
+        "service_desc": "Développeur depuis 5 ans, je transforme les idées en projets concrets… même les plus fous.",
+        "crafting_interactive_interfaces": "Création d’interfaces interactives",
+        "responsive_designs": "Designs responsives et pixel-perfect",
+        "animations_micro_interactions": "Animations et micro-interactions",
+        "accessibility_approach": "Accessibilité au cœur du design",
+        "application_pwa": "PWA",
+        "offline_fast": "Offline-first et chargement rapide",
+        "push_notifications": "Notifications push et mises à jour en temps réel",
+        "cross_platform": "Cross-platform (iOS & Android)",
+        "back_end": "Systèmes robustes et scalables",
+        "api_microservices": "APIs et microservices",
+        "database_design": "Conception et optimisation de bases de données",
+        "authentication_security": "Authentification et sécurité",
+        "about_me": "A propos de moi",
+        "box_title_1": "Vous avez une idée ou un",
+        "box_title_2": "projet en tête",
+        "box_desc": "Faites le premier pas dès maintenant",
+        "contact_me": "Contactez moi"
+
     }, "locale": {
         "fr": "français",
         "en": "anglais"
@@ -10,5 +34,11 @@
         "about": "À propos",
         "projects": "Projets",
         "contact": "Contact"
+    },
+    "Project" : {
+        "mobile_app": "application mobile",
+        "pwa": "PWA",
+        "tool": "outil",
+        "companion_app": "application companion"
     }
 }
