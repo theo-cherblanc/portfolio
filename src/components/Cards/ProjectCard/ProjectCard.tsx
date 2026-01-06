@@ -24,7 +24,7 @@ export default function ProjectCard({ title, tags, image }: ProjectCardProps) {
             />
             <div className="p-3">
                 <div className="text-2xl text-bold mb-4">{title}</div>
-                <div className="flex gap-2 gap-y-1 flex-wrap text-sm">
+                <div className="flex gap-3 gap-y-1 flex-wrap text-sm capitalize">
                     {tags.map((el) => (
                         <div key={el}>{t(el)}</div>
                     ))}

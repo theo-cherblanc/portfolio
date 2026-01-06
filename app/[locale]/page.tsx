@@ -14,6 +14,39 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
     const t = await getTranslations("Home");
     const tc = await getTranslations("Common");
 
+    const projects = [
+        {
+            id: "1",
+            title: "ARS Normandie",
+            tags: [
+                "web_app",
+                "frontend",
+                "payroll",
+                "business_application",
+                "react",
+            ],
+            image: "/ARS1.png",
+        },
+        {
+            id: "2",
+            title: "Omnitrans",
+            tags: ["mobile_app", "pwa", "tool", "companion_app", "frontend"],
+            image: "/omnitrans.png",
+        },
+        {
+            id: "3",
+            title: "Solveo",
+            tags: [
+                "web_app",
+                "frontend",
+                "backoffice",
+                "business_application",
+                "react",
+            ],
+            image: "/solveo.png",
+        },
+    ];
+
     return (
         <div className="flex min-h-screen items-center justify-center  font-sans">
             <main className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16">
@@ -62,23 +95,19 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                     {tc("projects")}
                 </div>
                 <div className="grid grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] mb-24">
-                    <ProjectCard
-                        title="ARS Normandie"
-                        tags={["mobile_app", "pwa", "tool", "companion_app"]}
-                        image="/ARS1.png"
-                    />
-                    <ProjectCard
-                        title="Omnitrans"
-                        tags={["mobile_app", "pwa", "tool", "companion_app"]}
-                        image="/omnitrans.png"
-                    />
-                    <ProjectCard
-                        title="Solveo"
-                        tags={["mobile_app", "pwa", "tool", "companion_app"]}
-                        image="/solveo.png"
-                    />
+                    {projects.map((el) => (
+                        <ProjectCard
+                            title={el.title}
+                            tags={el.tags}
+                            image={el.image}
+                            key={el.id}
+                        />
+                    ))}
                 </div>
-                <Button label={t("all_projects")} />
+                <Button
+                    label={t("all_projects")}
+                    href={`/${locale}/projects`}
+                />
                 <div className="mt-64 flex flex-col items-start gap-6 max-w-[1250px] w-full">
                     <div className="font-title flex-none">
                         <h1 className="flex flex-col gap-5 items-start">

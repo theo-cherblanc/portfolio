@@ -39,6 +39,20 @@
         "mobile_app": "application mobile",
         "pwa": "PWA",
         "tool": "outil",
-        "companion_app": "application companion"
+        "companion_app": "application companion",
+        "my": "mes",
+        "projects": "projets",
+        "subtitle": "Découvrez ici mes projets majeurs des dernières années, soigneusement organisés",
+         "web_app": "Application web",
+        "frontend": "Frontend",
+        "payroll": "Gestion de paie",
+        "business_application": "Application métier",
+        "react": "React",
+        "backoffice": "backoffice",
+        "3d_visualization": "Visualisation 3D",
+        "showcase_website": "Site vitrine",
+        "e-commerce": "E-commerce",
+        "thelia": "thelia",
+        "fullstack": "fullstack"
     }
 }

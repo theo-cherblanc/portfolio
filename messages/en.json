@@ -40,6 +40,21 @@
         "mobile_app": "Mobile application",
         "pwa": "PWA",
         "tool": "tool",
-        "companion_app": "companion app"
+        "companion_app": "companion app",
+        "my": "my",
+        "projects": "projects",
+        "subtitle": "Check out the biggest projects I’ve worked on in recent years, all neatly organized",
+        "web_app": "Web application",
+        "frontend": "Frontend",
+        "payroll": "Payroll",
+        "business_application": "Business application",
+        "react": "React",
+        "backoffice": "backoffice",
+        "3d_visualization": "3D Vizualisation",
+        "showcase_website": "Showcase website",
+        "e-commerce": "E-commerce",
+        "thelia": "thelia",
+        "fullstack": "fullstack"
+
     }
 }
