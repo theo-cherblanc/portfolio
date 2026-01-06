@@ -3,17 +3,23 @@
 :root {
   --background: #f4f1eb;
   --foreground: #0D141FFF;
+  --background-secondary: #161528;
+  --background-tertiary: #fff;
 }
 
 
 .dark {
   --background: #0D141FFF;
   --foreground: #f4f1eb;
+  --background-secondary: #302e3c;
+  --background-tertiary: #302e3c;
 }
 
 @theme {
   --color-white: #f4f1eb;
   --color-primary: #BE99F2;
+  --color-background-secondary:  var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
 }  
 
 
@@ -22,6 +28,8 @@
   --color-foreground: var(--foreground);
   --color-black: #0D141FFF;
   --color-white: #f4f1eb;
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

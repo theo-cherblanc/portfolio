@@ -1,7 +1,31 @@
 {
     "Home": {
         "title": "Hello and welcome, I am",
-        "subtitle": "As a passionate web developer, I design effective and aesthetically pleasing digital solutions tailored to your needs."
+        "subtitle": "As a passionate web developer, I design effective and aesthetically pleasing digital solutions tailored to your needs.",
+        "completed_projects" : "completed projects",
+        "years_experience": "years of experience",
+        "all_projects": "all projects",
+         "need": "you need",
+        "interface": "a interface",
+        "service_desc": "I’ve been a developer for 5 years, turning ideas into real projects… even the wildest ones.",
+        "crafting_interactive_interfaces": "Crafting Interactive Interfaces",
+        "responsive_designs": "Responsive & pixel-perfect designs",
+        "animations_micro_interactions": "Animations & micro-interactions",
+        "accessibility_approach": "Accessibility-first approach",
+        "application_pwa": "PWA",
+        "offline_fast": "Offline-first & fast loading",
+        "push_notifications": "Push notifications & real-time updates",
+        "cross_platform": "Cross-platform (iOS & Android)",
+        "back_end": "Robust & Scalable Systems",
+        "api_microservices": "APIs & microservices",
+        "database_design": "Database design & optimization",
+        "authentication_security": "Authentication & security",
+        "about_me": "About me",
+        "box_title_1": "Do you have an idea or a",
+        "box_title_2": "project in mind",
+        "box_desc": "Take the first step today.",
+        "contact_me": "contact me"
+        
     },
     "locale": {
         "fr": "french",
@@ -11,5 +35,32 @@
         "about": "About me",
         "projects": "Projects",
         "contact": "Contact"
+    },
+    "Project" : {
+        "mobile_app": "Mobile application",
+        "pwa": "PWA",
+        "tool": "tool",
+        "companion_app": "companion app",
+        "my": "my",
+        "projects": "projects",
+        "subtitle": "Check out the biggest projects I’ve worked on in recent years, all neatly organized",
+        "web_app": "Web application",
+        "frontend": "Frontend",
+        "payroll": "Payroll",
+        "business_application": "Business application",
+        "react": "React",
+        "backoffice": "backoffice",
+        "3d_visualization": "3D Vizualisation",
+        "showcase_website": "Showcase website",
+        "e-commerce": "E-commerce",
+        "thelia": "thelia",
+        "fullstack": "fullstack"
+
+    },
+    "Metadata" : {
+        "layout_title" : "Theo Cherblanc – Web Developer & Portfolio",
+        "layout_description" : "Explore the projects and work of Theo Cherblanc, a web developer specializing in modern web applications and user experiences.",
+        "projects_title" : "Projects – Theo Cherblanc, Web Developer",
+        "projects_description" : "Explore the projects by Theo Cherblanc: web applications, interactive interfaces, and creative digital solutions."
     }
 }
