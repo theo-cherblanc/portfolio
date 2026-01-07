@@ -7,7 +7,7 @@ import LogoIcon from "@/src/assets/icon.svg";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { routing } from "@/src/i18n/routing";
-
+import ProjectData from "@/src/data/projects.json";
 type Props = {
     children: React.ReactNode;
     params: Promise<{ locale: string }>;
@@ -32,94 +32,6 @@ export default async function Projects({ params }: PageProps<"/[locale]">) {
     const t = await getTranslations("Project");
     const tc = await getTranslations("Common");
 
-    const projects = [
-        {
-            id: "1",
-            title: "ARS Normandie",
-            tags: [
-                "web_app",
-                "frontend",
-                "payroll",
-                "business_application",
-                "react",
-            ],
-            image: "/ARS1.png",
-        },
-        {
-            id: "2",
-            title: "Omnitrans",
-            tags: ["mobile_app", "pwa", "tool", "companion_app", "frontend"],
-            image: "/omnitrans.png",
-        },
-        {
-            id: "3",
-            title: "Solveo",
-            tags: [
-                "web_app",
-                "frontend",
-                "backoffice",
-                "business_application",
-                "react",
-            ],
-            image: "/solveo.png",
-        },
-        {
-            id: "4",
-            title: "Atelier 3s",
-            tags: ["mobile_app", "pwa", "companion_app", "frontend"],
-            image: "/atelier3s.png",
-        },
-        {
-            id: "5",
-            title: "APHP",
-            tags: [
-                "web_app",
-                "frontend",
-                "3d_visualization",
-                "tool",
-                "business_application",
-                "react",
-            ],
-            image: "/aphp.png",
-        },
-        {
-            id: "6",
-            title: "Osteobrioude",
-            tags: ["showcase_website", "next.js"],
-            image: "/osteobrioude.png",
-        },
-        {
-            id: "7",
-            title: "Billaudot",
-            tags: ["e-commerce", "frontend", "thelia"],
-            image: "/billaudot.png",
-        },
-        {
-            id: "8",
-            title: "Jardin de mado",
-            tags: ["e-commerce", "frontend", "thelia"],
-            image: "/jardinmado1.png",
-        },
-        {
-            id: "9",
-            title: "Kalkin Tourisme",
-            tags: ["web_app", "backoffice", "companion_app", "fullstack"],
-            image: "/kalkin1.png",
-        },
-        {
-            id: "10",
-            title: "Kalkin Tools",
-            tags: [
-                "web_app",
-                "backoffice",
-                "companion_app",
-                "fullstack",
-                "tool",
-            ],
-            image: "/kalkin.png",
-        },
-    ];
-
     return (
         <div className="flex min-h-screen items-center justify-center  font-sans">
             <main className="flex min-h-screen w-full flex-col items-center justify-between py-64 px-16">
@@ -139,12 +51,13 @@ export default async function Projects({ params }: PageProps<"/[locale]">) {
                     </div>
                 </div>
                 <div className="grid grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] mb-24 mt-32">
-                    {projects.map((el) => (
+                    {ProjectData.projects.map((el) => (
                         <ProjectCard
                             title={el.title}
                             tags={el.tags}
                             image={el.image}
                             key={el.id}
+                            href={`/${locale}/projects/${el.id}`}
                         />
                     ))}
                 </div>

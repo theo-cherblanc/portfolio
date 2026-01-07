@@ -20,12 +20,7 @@
         "api_microservices": "APIs & microservices",
         "database_design": "Database design & optimization",
         "authentication_security": "Authentication & security",
-        "about_me": "About me",
-        "box_title_1": "Do you have an idea or a",
-        "box_title_2": "project in mind",
-        "box_desc": "Take the first step today.",
-        "contact_me": "contact me"
-        
+        "about_me": "About me" 
     },
     "locale": {
         "fr": "french",
@@ -37,6 +32,7 @@
         "contact": "Contact"
     },
     "Project" : {
+        "other_projects": "Other projects",
         "mobile_app": "Mobile application",
         "pwa": "PWA",
         "tool": "tool",
@@ -54,8 +50,32 @@
         "showcase_website": "Showcase website",
         "e-commerce": "E-commerce",
         "thelia": "thelia",
-        "fullstack": "fullstack"
-
+        "fullstack": "fullstack",
+        "ionic_capacitor": "Ionic / Capacitor",
+        "remix": "Remix",
+        "tailwind": "Tailwind css",
+        "storybook": "Storybook",
+        "docker": "Docker",
+        "vtkjs": "VTK.js",
+        "nextjs": "Next.js",
+        "php": "PHP",
+        "html": "HTML5 & CSS3",
+        "js": "JavaScript / TypeScript",
+        "vuejs": "Vue.js",
+        "expressjs": "Express.js",
+        "tags": "Tags",
+        "recap": "Recap",
+        "stack": "Project Stack",
+        "description1": "ARS Normandie project is a business-oriented payroll management application, developed in close collaboration with a backend developer.\n\nI was responsible for the entire frontend development, designing a robust and user-friendly interface tailored to complex business requirements.\n\nThe application allows users to simulate salaries for different types of public sector agents, including contract workers, seconded employees under contract, tenured staff, and agents under the general public service scheme.\nIt relies on large, dynamic forms used to capture all the required information for future employees, with specific validation and calculation rules.\n\nA significant part of the application is dedicated to annual performance evaluations.\nThese evaluations, carried out for all managers, directly impact eligibility for performance-based bonuses and require precise workflows, fine-grained access control, and high data reliability.\n\nThe application also includes automatic generation of contracts and contract amendments in PDF format, statistics and reporting tools, authentication, and multi-level user management.",
+        "description2": "This application is a companion PWA to a back office dedicated to fleet management for trucks, semi-trailers, and rigid vehicles.\n\nIt allows drivers to perform a complete vehicle inspection before starting their journey by carrying out a detailed condition report.\nUsers can report any damages, technical issues, or hygiene compliance problems directly from the application.\n\nAll collected data is then sent back to the back office in real time, enabling fleet management teams to monitor vehicle conditions, anticipate maintenance operations, and ensure vehicle safety and compliance.\n\nThe application was designed with a mobile-first approach, focusing on simplicity, speed, and reliability for real-world field usage.",
+        "description3": "Solveo is a web application designed to manage the configuration and automated control of solar panels installed above agricultural crops.\n\nIt provides a comprehensive supervision interface to monitor and adjust panel behavior based on crop needs and environmental conditions.\n\nThe application includes an authentication system and a strong focus on statistics and data visualization.\nThese indicators cover both crops and solar panels, such as panel tilt, temperature, rainfall, and other environmental parameters.\n\nThis project highlights challenges related to real-time data management, clear visualization of complex indicators, and the reliability of automated systems in an agricultural context.",
+        "description4": "This application is a PWA developed for the company Atelier 3S, designed to browse a metal cladding product catalog.\n\nThe application provides a simple and intuitive navigation through the different product ranges, clearly highlighting product features and visuals.\n\nAn interactive minimap allows users to explore various completed projects and real-world installations, supporting discovery and inspiration.\n\nThe application is connected to a WordPress-based API, enabling dynamic retrieval of product and project data while ensuring centralized content management.",
+        "description5": "This tool was developed as a Proof of Concept for AP-HP, enabling the overlay of 3D files and the visualization of medical data.\n\nThe application uses VTK.js to display organs and highlight cancerous areas. Users can provide input files and obtain a 3D visualization of the annotated elements.\n\nThe frontend is connected to a backend that processes the source files and generates visualization files in VTK.js format (.nii), allowing interactive and precise exploration of medical data.\n\nThis project showcases challenges related to 3D data processing, interactive rendering, and frontend/backend collaboration in a sensitive scientific context.",
+        "description6": "This project is a one-page showcase website developed for an osteopath, presenting their services, background, and contact information.\n\nThe site allows visitors to easily view the available treatments and contact the clinic directly.\n\nThe focus was on a clear, responsive, and user-friendly interface, providing a simple and straightforward experience.\n\nThis project highlights the rapid creation of a professional and accessible website, with a modern and clean design.",
+        "description7": "This project is an e-commerce website for selling music manuals and books for the company Billaudot.\n\nMy role focused on TMA (Third-Party Application Maintenance): debugging, fixing issues, and adding small features to enhance the user experience.\n\nThe project highlights the maintenance and improvement of an existing commercial platform, ensuring stability and reliability for users.",
+        "description8": "This project is an e-commerce website for selling flower pots for the company Jardin Mado.\n\nI contributed to the creation of the Storybook to document and standardize UI components for the project.\nI also integrated several features during development, contributing to the enhancement and evolution of the platform.\n\nThe project highlights the implementation of frontend best practices and my direct contribution to the development of a modern commercial platform.",
+        "description9": "Kalkin is a company that creates 3D territory visualization software, highlighting points of interest such as hiking trails, activities, and other attractions, targeted at tourism offices.\n\nI worked as a fullstack developer on the project, in collaboration with another developer, to build the back office enabling remote management and control of the Kalkin Tourisme application content.\n\nThe project highlights complex data management and technical collaboration to develop a complete content management solution for tourism.",
+        "description10": "For the company Kalkin, I developed a series of internal tools designed to simplify the company’s workflows and optimize processes.\n\nI worked as a **fullstack developer**, contributing to the design and development of these tools.\n\nThe project highlights operational efficiency improvements and the creation of custom internal solutions tailored to the company’s needs."
     },
     "About" : {
         "title": "Theo, 26 years old",
@@ -102,6 +122,12 @@
         "projects_type": "Project Types",
         "skills_soft": "Soft Skills",
         "all_projects": "all projects"
+    },
+    "Footer": {
+        "box_title_1": "Do you have an idea or a",
+        "box_title_2": "project in mind",
+        "box_desc": "Take the first step today.",
+        "contact_me": "contact me"
     },
     "Metadata" : {
         "layout_title" : "Theo Cherblanc – Web Developer & Portfolio",

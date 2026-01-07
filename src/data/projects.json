@@ -1,0 +1,119 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "ARS Normandie",
+            "type": "web_app",
+            "tags": [
+                "web_app",
+                "frontend",
+                "payroll",
+                "business_application"
+            ],
+            "stack": ["react", "remix", "tailwind", "storybook", "docker"],
+            "part": "frontend",
+            "job": "openstudio",
+            "description": "description1",
+            "image": "/ARS1.png" 
+        },
+        {
+            "id": 2,
+            "title": "Omnitrans",
+            "type": "mobile_app",
+            "tags": ["mobile_app", "pwa", "tool", "companion_app", "frontend"],
+            "stack": ["react", "ionic_capacitor", "tailwind"],
+            "part": "frontend",
+            "job": "openstudio",
+            "description": "description2",
+            "image": "/omnitrans.png"
+        },
+        {
+            "id": 3,
+            "title": "Solvéo",
+            "type": "web_app",
+            "tags": ["web_app","frontend","backoffice","business_application","react"],
+            "stack": ["react", "remix", "tailwind"],
+            "part": "frontend",
+            "job": "openstudio",
+            "description": "description3",
+            "image": "/solveo.png" 
+        },
+        {
+            "id": 4,
+            "title": "Atelier 3s",
+            "type": "mobile_app",
+            "tags": ["mobile_app", "pwa", "companion_app", "frontend"],
+            "stack": ["react", "remix", "tailwind"],
+            "part": "frontend",
+            "job": "openstudio",
+            "description": "description4",
+            "image": "/atelier3s.png"
+        },
+        {
+            "id": 5,
+            "title": "APHP",
+            "type": "web_app",
+            "tags": ["web_app","frontend","3d_visualization","tool","business_application","react"],
+            "stack": ["react", "vtkjs"],
+            "part": "frontend",
+            "job": "openstudio",
+            "description": "description5",
+            "image": "/aphp.png"
+        },
+        {
+            "id": 6,
+            "title": "OsteoBrioude",
+            "type": "showcase_website",
+            "tags": ["showcase_website", "nextjs"],
+            "stack": ["react", "nextjs"],
+            "part": "frontend",
+            "job": "freelance",
+            "description": "description6",
+            "image": "/osteobrioude.png" 
+        },
+        {
+            "id": 7,
+            "title": "Billaudot",
+            "type": "e-commerce",
+            "tags": ["e-commerce", "frontend", "thelia"],
+            "stack": ["php", "html", "js", "thelia"],
+            "part": "frontend",
+            "job": "openstudio",
+            "description": "description7",
+            "image": "/billaudot.png" 
+        },
+        {
+            "id": 8,
+            "title": "Jardin de mado",
+            "type": "e-commerce",
+            "tags": ["e-commerce", "frontend", "thelia"],
+            "stack": ["php", "html", "js", "thelia"],
+            "part": "frontend",
+            "job": "openstudio",
+            "description": "description8",
+            "image": "/jardinmado1.png" 
+        },
+        {
+            "id": 9,
+            "title": "Kalkin Tourisme",
+            "type": "backoffice",
+            "tags": ["web_app", "backoffice", "companion_app", "fullstack"],
+            "stack": ["vuejs", "expressjs"],
+            "part": "fullstack",
+            "job": "kalkin",
+            "description": "description9",
+            "image": "/kalkin1.png" 
+        },
+        {
+            "id": 10,
+            "title": "Kalkin Tools",
+            "type": "tools",
+            "tags": ["web_app", "backoffice", "companion_app", "fullstack", "tool"],
+            "stack": ["vuejs", "expressjs"],
+            "part": "fullstack",
+            "job": "kalkin",
+            "description": "description10",
+            "image": "/kalkin.png"
+        }
+    ]
+}

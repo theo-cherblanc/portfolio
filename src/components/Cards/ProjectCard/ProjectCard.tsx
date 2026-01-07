@@ -2,18 +2,25 @@ import { useTranslations } from "next-intl";
 
 import Image from "next/image";
 import Icon from "@/src/assets/icon_small.svg";
+import Link from "next/link";
 
 type ProjectCardProps = {
     title: string;
     tags: string[];
     image: string;
+    href: string;
 };
 
-export default function ProjectCard({ title, tags, image }: ProjectCardProps) {
+export default function ProjectCard({
+    title,
+    tags,
+    image,
+    href,
+}: ProjectCardProps) {
     const t = useTranslations("Project");
 
     return (
-        <div className="bg-background-tertiary p-3 rounded-xl">
+        <Link className="bg-background-tertiary p-3 rounded-xl" href={href}>
             <Image
                 width={400}
                 height={600}
@@ -30,6 +37,6 @@ export default function ProjectCard({ title, tags, image }: ProjectCardProps) {
                     ))}
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
