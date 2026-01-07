@@ -5,6 +5,7 @@ import Image from "next/image";
 import LogoIcon from "@/src/assets/icon.svg";
 import ProjectCard from "@/src/components/Cards/ProjectCard/ProjectCard";
 import Button from "@/src/components/Buttons/Button";
+import projectData from "@/src/data/projects.json";
 
 export default async function Home({ params }: PageProps<"/[locale]">) {
     const { locale } = await params;
@@ -13,39 +14,6 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
     setRequestLocale(locale as Locale);
     const t = await getTranslations("Home");
     const tc = await getTranslations("Common");
-
-    const projects = [
-        {
-            id: "1",
-            title: "ARS Normandie",
-            tags: [
-                "web_app",
-                "frontend",
-                "payroll",
-                "business_application",
-                "react",
-            ],
-            image: "/ARS1.png",
-        },
-        {
-            id: "2",
-            title: "Omnitrans",
-            tags: ["mobile_app", "pwa", "tool", "companion_app", "frontend"],
-            image: "/omnitrans.png",
-        },
-        {
-            id: "3",
-            title: "Solveo",
-            tags: [
-                "web_app",
-                "frontend",
-                "backoffice",
-                "business_application",
-                "react",
-            ],
-            image: "/solveo.png",
-        },
-    ];
 
     return (
         <div className="flex min-h-screen items-center justify-center  font-sans">
@@ -95,12 +63,13 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                     {tc("projects")}
                 </div>
                 <div className="grid grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] mb-24">
-                    {projects.map((el) => (
+                    {projectData.projects.slice(0, 3).map((el) => (
                         <ProjectCard
                             title={el.title}
                             tags={el.tags}
                             image={el.image}
                             key={el.id}
+                            href={`/${locale}/projects/${el.id}`}
                         />
                     ))}
                 </div>
@@ -156,16 +125,6 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                     </div>
                 </div>
                 <Button label={t("about_me")} />
-                <div className="bg-foreground text-background mt-64 max-w-[1250px] w-full rounded-xl flex flex-col items-center gap-6 p-24">
-                    <div className="font-title flex-none">
-                        <h1 className="flex flex-col gap-5 items-center">
-                            <div className="text-3xl">{t("box_title_1")}</div>
-                            <div className="text-7xl">{t("box_title_2")} ?</div>
-                        </h1>
-                    </div>
-                    <h2 className="text-2xl max-w-xl">{t("box_desc")}</h2>
-                    <Button label={t("contact_me")} variant="secondary" />
-                </div>
             </main>
         </div>
     );

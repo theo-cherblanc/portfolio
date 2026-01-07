@@ -5,6 +5,7 @@ import { routing } from "@/src/i18n/routing";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import NavBar from "@/src/components/NavBar/NavBar";
+import Footer from "@/src/components/Footer/Footer";
 
 // export const metadata: Metadata = {
 //     title: "Theo CHERBLANC - Developer web",
@@ -42,6 +43,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                 <NextIntlClientProvider>
                     <NavBar />
                     {children}
+                    <Footer />
                 </NextIntlClientProvider>
             </body>
         </html>
