@@ -17,38 +17,47 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
 
     return (
         <div className="flex min-h-screen items-center justify-center  font-sans">
-            <main className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16">
-                <div className="flex items-center justify-between max-w-[1250px]">
-                    <div className="flex flex-col items-start gap-6 ">
+            <main className="flex min-h-screen w-full flex-col items-center justify-between pb-0 pt-32 lg:py-32 px-16">
+                <div className="flex flex-col-reverse lg:flex-row items-center justify-between max-w-[1250px]">
+                    <div className="flex flex-col items-center lg:items-start gap-6 mt-12 lg:mt-0">
                         <div className="font-title flex-none">
-                            <h1 className="flex flex-col gap-5 items-start">
-                                <div className="text-3xl">{t("title")}</div>
-                                <div className="text-7xl">Theo Cherblanc</div>
+                            <h1 className="flex flex-col lg:gap-5 items-center lg:items-start">
+                                <div className=" text-3xl lg:text-3xl text-center lg:text-start">
+                                    {t("title")}
+                                </div>
+                                <div className="text-5xl lg:text-7xl text-center lg:text-start">
+                                    Theo Cherblanc
+                                </div>
                             </h1>
                         </div>
-                        <h2 className="text-2xl max-w-xl">{t("subtitle")}</h2>
+                        <h2 className="text-lg lg:text-2xl text-center lg:text-start max-w-xl">
+                            {t("subtitle")}
+                        </h2>
                         <div className="flex items-center justify-between w-full">
-                            <div className="flex items-center gap-5">
+                            <div className="flex flex-col lg:flex-row items-center gap-5">
                                 <div className="flex justify-center items-center text-4xl bg-background-secondary text-white rounded-lg w-15 h-15">
                                     10
                                 </div>
-                                <div className="text-xl">
+                                <div className="text-lg lg:text-xl">
                                     {t("completed_projects")}
                                 </div>
                             </div>
-                            <div className="flex items-center gap-5">
+                            <div className="flex flex-col lg:flex-row items-center gap-5">
                                 <div className="flex justify-center items-center text-4xl bg-background-secondary text-white rounded-lg w-15 h-15">
                                     5
                                 </div>
-                                <div className="text-xl">
+                                <div className="text-lg lg:text-xl">
                                     {t("years_experience")}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="relative w-[1000px] h-[1000px] flex items-center justify-center">
-                        <div className="absolute bg-white rounded-full w-[500px] h-[500px] z-1"></div>
-                        {/* <LogoIcon className="text-black z-2" /> */}
+                    <div className="relative w-[350px] h-350px]  flex lg:hidden items-center justify-center mt-6 lg:mt-0">
+                        <div className="absolute bg-white rounded-full w-[300px] h-[300px] z-1"></div>
+                        <LogoIcon className="text-black z-2" />
+                    </div>
+                    <div className="relative w-[350px] h-[35Opx] lg:w-[1000px] lg:h-[1000px] hidden lg:flex items-center justify-center">
+                        <div className="absolute bg-white rounded-full w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] z-1"></div>
                         <Image
                             src="icon.gif"
                             alt="Ball animation"
@@ -59,10 +68,10 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                         />
                     </div>
                 </div>
-                <div className="font-title text-6xl mb-24">
+                <div className="font-title text-5xl lg:text-6xl mb-14 lg:mb-24 lg:mt-0 mt-20">
                     {tc("projects")}
                 </div>
-                <div className="grid grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] mb-24">
+                <div className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 max-w-[1250px] mb-12 lg:mb-24 px-6 lg:px-0">
                     {projectData.projects.slice(0, 3).map((el) => (
                         <ProjectCard
                             title={el.title}
@@ -77,16 +86,22 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                     label={t("all_projects")}
                     href={`/${locale}/projects`}
                 />
-                <div className="mt-64 flex flex-col items-start gap-6 max-w-[1250px] w-full">
+                <div className="mt-32 lg:mt-64 flex flex-col items-start gap-12 max-w-[1250px] w-full ">
                     <div className="font-title flex-none">
-                        <h1 className="flex flex-col gap-5 items-start">
-                            <div className="text-3xl">{t("need")}</div>
-                            <div className="text-7xl">{t("interface")} ?</div>
+                        <h1 className="flex flex-col gap-3 items-start">
+                            <div className="text-3xl lg:text-3xl">
+                                {t("need")}
+                            </div>
+                            <div className="text-6xl lg:text-7xl">
+                                {t("interface")} ?
+                            </div>
                         </h1>
                     </div>
-                    <h2 className="text-2xl max-w-xl">{t("service_desc")}</h2>
+                    <h2 className="text-xl lg:text-2xl max-w-xl">
+                        {t("service_desc")}
+                    </h2>
                 </div>
-                <div className="grid grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] my-24">
+                <div className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 opacity-100 max-w-[1250px] px-6 lg:px-0 mb-12 mt-24 lg:my-24">
                     <div className="flex flex-col items-center gap-4 bg-background-tertiary py-12 px-4 rounded-xl">
                         <div>logo</div>
                         <div className="text-center text-3xl font-title">

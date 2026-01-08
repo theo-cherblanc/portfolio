@@ -34,23 +34,29 @@ export default async function Projects({ params }: PageProps<"/[locale]">) {
 
     return (
         <div className="flex min-h-screen items-center justify-center  font-sans">
-            <main className="flex min-h-screen w-full flex-col items-center justify-between py-64 px-16">
-                <div className="flex items-center justify-between max-w-[1250px] w-full">
+            <main className="flex min-h-screen w-full flex-col items-center justify-between  pb-0 pt-32 lg:py-64 px-16">
+                <div className="flex items-center flex-col-reverse lg:flex-row justify-between max-w-[1250px] w-full">
                     <div className="flex flex-col items-start gap-6 ">
                         <div className="font-title flex-none">
-                            <h1 className="flex flex-col gap-5 items-start">
-                                <div className="text-5xl">{t("my")}</div>
-                                <div className="text-8xl">{t("projects")}</div>
+                            <h1 className="flex flex-col lg:gap-2 items-start">
+                                <div className="text-3xl lg:text-5xl">
+                                    {t("my")}
+                                </div>
+                                <div className="text-5xl lg:text-8xl">
+                                    {t("projects")}
+                                </div>
                             </h1>
                         </div>
-                        <h2 className="text-2xl max-w-xl">{t("subtitle")}</h2>
+                        <h2 className="text-lg lg:text-2xl max-w-xl">
+                            {t("subtitle")}
+                        </h2>
                     </div>
-                    <div className="relative w-[600px] h-600px] flex items-center justify-center">
-                        <div className="absolute bg-white rounded-lg w-[600px] h-[400px] z-1"></div>
+                    <div className="relative w-[350px] h-[350px] lg:w-[600px] lg:h-600px] flex items-center justify-center">
+                        <div className="absolute bg-white rounded-lg w-[300px] h-[300px] z-1"></div>
                         <LogoIcon className="text-black z-2" />
                     </div>
                 </div>
-                <div className="grid grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] mb-24 mt-32">
+                <div className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 opacity-100 max-w-[1250px]  mt-32 px-6 lg:px-0">
                     {ProjectData.projects.map((el) => (
                         <ProjectCard
                             title={el.title}

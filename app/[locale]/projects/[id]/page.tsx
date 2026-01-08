@@ -59,22 +59,24 @@ export default async function Project({
 
     return (
         <div className="flex min-h-screen items-center justify-center  font-sans">
-            <main className="flex min-h-screen w-full flex-col py-64 px-16 max-w-[1250px]">
-                <h1 className="font-title text-5xl mb-6">{project?.title}</h1>
-                <div className="text-2xl font-bold">
+            <main className="flex min-h-screen w-full flex-col pt-32 lg:py-64  lg:px-16 max-w-[1250px]">
+                <h1 className="font-title text-5xl mb-4 lg:mb-6 px-12 lg:px-0">
+                    {project?.title}
+                </h1>
+                <div className="text-2xl font-bold px-12 lg:px-0">
                     {t(project?.type || "")}
                 </div>
-                <div className="flex mt-24">
-                    <div className="w-3/5 pr-16">
-                        <h2 className="font-title text-3xl mb-12">
+                <div className="flex flex-col lg:flex-row mt-6 lg:mt-12 lg:mt-24 px-12 lg:px-0">
+                    <div className="lg:w-3/5 lg:pr-16">
+                        <h2 className="font-title text-3xl mb-6 lg:mb-12">
                             {t("recap")}
                         </h2>
-                        <p className="whitespace-pre-line text-xl">
+                        <p className="whitespace-pre-line text-lg lg:text-xl">
                             {t(project?.description || "")}
                         </p>
                     </div>
-                    <div className="w-2/5">
-                        <h2 className="font-title text-3xl mb-12">
+                    <div className=" mt-24 lg:mt-0 lg:w-2/5">
+                        <h2 className="font-title text-3xl mb-6 lg:mb-12">
                             {t("tags")}
                         </h2>
                         <ul className="space-y-2">
@@ -89,11 +91,11 @@ export default async function Project({
                                 </li>
                             ))}
                         </ul>
-                        <h2 className="font-title text-3xl my-12">
+                        <h2 className="font-title text-3xl mt-24 mb-6 lg:my-12">
                             {t("stack")}
                         </h2>
-                        <div className="bg-background-tertiary rounded-xl p-4">
-                            <div className="grid grid-cols-2 w-full gap-6 opacity-100 max-w-[1250px] ">
+                        <div className="bg-background-tertiary rounded-xl p-4 w-full">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-6 opacity-100 max-w-[1250px] ">
                                 {project?.stack.map((el) => {
                                     const Icon = StackIcon[el];
                                     return (
@@ -119,10 +121,10 @@ export default async function Project({
                         </div>
                     </div>
                 </div>
-                <div className="font-title text-5xl text-center mb-24 mt-64">
+                <div className="font-title text-5xl text-center mb-14 lg:mb-24 mt-32 lg:mt-64">
                     {t("other_projects")}
                 </div>
-                <div className="grid grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] mb-24">
+                <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] lg:mb-24 px-6 lg:px-0">
                     {getRandomThree(project?.id || 0).map((el) => (
                         <ProjectCard
                             title={el.title}
