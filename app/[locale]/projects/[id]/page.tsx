@@ -124,7 +124,7 @@ export default async function Project({
                 <div className="font-title text-5xl text-center mb-14 lg:mb-24 mt-32 lg:mt-64">
                     {t("other_projects")}
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] lg:mb-24 px-6 lg:px-0">
+                <div className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full self-center gap-8 opacity-100 max-w-[1250px] lg:mb-24 px-6 lg:px-0">
                     {getRandomThree(project?.id || 0).map((el) => (
                         <ProjectCard
                             title={el.title}

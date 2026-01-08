@@ -181,9 +181,9 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                         width={1000}
                         height={1000}
                         alt="profil picture"
-                        className="rounded-xl w-[200px] lg:w-[400px] lg:h-[700px]"
+                        className="rounded-xl w-[200px] md:w-[300px] lg:w-[400px] lg:h-[700px]"
                     />
-                    <div className="flex flex-col items-start gap-6 w-100 lg:w-full px-12 lg:px-0">
+                    <div className="flex flex-col items-start gap-6 w-100 md:w-full px-12 lg:px-0">
                         <div className="font-title flex-none">
                             <h1 className="flex flex-col gap-2 lg:gap-5 items-start">
                                 <div className="text-xl lg:text-3xl">
@@ -204,7 +204,7 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                 <div className="flex items-center my-12">
                     <Button label="Mon CV" />
                 </div>
-                <div className="flex flex-col items-start gap-6 w-100 lg:w-full mt-24 lg:mt-32 px-12 lg:px-0">
+                <div className="flex flex-col items-start gap-6 w-100 md:w-full mt-24 lg:mt-32 px-12 lg:px-0">
                     <div className="font-title">
                         <h1 className="flex flex-col gap-5 items-start">
                             <div className="text-2xl lg:text-3xl">
@@ -217,7 +217,7 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                     </div>
                     <h2 className="text-lg max-w-xl">{t("stack_desc")}</h2>
                 </div>
-                <div className="w-100 lg:w-full flex flex-col gap-12 mt-16 px-6 lg:px-0">
+                <div className="w-100 md:w-full flex flex-col gap-12 mt-16 px-6 lg:px-0">
                     {skills.map((el) => (
                         <div
                             key={el.title}

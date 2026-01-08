@@ -1,8 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Button from "../Buttons/Button";
 
 export default function Footer() {
     const t = useTranslations("Footer");
+    const locale = useLocale();
 
     return (
         <div className="flex items-center justify-center my-32 lg:my-64 px-6">
@@ -20,7 +21,11 @@ export default function Footer() {
                 <h2 className="text-2xl max-w-xl text-center lg:text-start">
                     {t("box_desc")}
                 </h2>
-                <Button label={t("contact_me")} variant="secondary" />
+                <Button
+                    label={t("contact_me")}
+                    variant="secondary"
+                    href={`/${locale}/contact`}
+                />
             </div>
         </div>
     );

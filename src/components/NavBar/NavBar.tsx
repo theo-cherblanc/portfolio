@@ -30,7 +30,7 @@ export default function NavBar() {
 
     return (
         <nav className="fixed p-4 lg:p-8 flex justify-between items-center w-full z-30 backdrop-blur-md">
-            <div className="flex gap-8 items-center text-2xl">
+            <div className="flex gap-8 items-center lg:text-xl xl:text-2xl">
                 <Link href={`/${locale}`} className="bg-primary rounded-lg p-2">
                     <Icon className="w-11 h-11 lg:w-16 lg:h-16 text-black" />
                 </Link>

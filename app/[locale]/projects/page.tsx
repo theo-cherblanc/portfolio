@@ -51,8 +51,8 @@ export default async function Projects({ params }: PageProps<"/[locale]">) {
                             {t("subtitle")}
                         </h2>
                     </div>
-                    <div className="relative w-[350px] h-[350px] lg:w-[600px] lg:h-600px] flex items-center justify-center">
-                        <div className="absolute bg-white rounded-lg w-[300px] h-[300px] z-1"></div>
+                    <div className="relative w-[350px] h-[350px] lg:w-[350px] lg:h-[350px] xl:w-[600px] xl:h-[600px] flex items-center justify-center">
+                        <div className="absolute bg-white rounded-lg w-[300px] h-[300px] xl:w-[600px] xl:h-[400px] z-1"></div>
                         <LogoIcon className="text-black z-2" />
                     </div>
                 </div>

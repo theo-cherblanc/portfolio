@@ -56,8 +56,8 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                         <div className="absolute bg-white rounded-full w-[300px] h-[300px] z-1"></div>
                         <LogoIcon className="text-black z-2" />
                     </div>
-                    <div className="relative w-[350px] h-[35Opx] lg:w-[1000px] lg:h-[1000px] hidden lg:flex items-center justify-center">
-                        <div className="absolute bg-white rounded-full w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] z-1"></div>
+                    <div className="relative w-[350px] h-[35Opx] lg:w-[500px] lg:h-[500px] xl:w-[1000px] xl:h-[1000px] hidden lg:flex items-center justify-center">
+                        <div className="absolute bg-white rounded-full w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] z-1"></div>
                         <Image
                             src="icon.gif"
                             alt="Ball animation"
@@ -68,7 +68,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                         />
                     </div>
                 </div>
-                <div className="font-title text-5xl lg:text-6xl mb-14 lg:mb-24 lg:mt-0 mt-20">
+                <div className="font-title text-5xl lg:text-6xl mb-14 lg:mb-24 lg:mt-32 xl:mt-0 mt-20">
                     {tc("projects")}
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 max-w-[1250px] mb-12 lg:mb-24 px-6 lg:px-0">
@@ -107,7 +107,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                         <div className="text-center text-3xl font-title">
                             {t("crafting_interactive_interfaces")}
                         </div>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 text-center">
                             <div>{t("responsive_designs")}</div>
                             <div>{t("animations_micro_interactions")}</div>
                             <div>{t("accessibility_approach")}</div>
@@ -119,7 +119,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                         <div className="text-center text-3xl font-title">
                             {t("application_pwa")}
                         </div>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 text-center">
                             <div>{t("offline_fast")}</div>
                             <div>{t("push_notifications")}</div>
                             <div>{t("cross_platform")}</div>
@@ -131,7 +131,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                         <div className="text-center text-3xl font-title">
                             {t("back_end")}
                         </div>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 text-center">
                             <div>{t("api_microservices")}</div>
                             <div>{t("database_design")}</div>
                             <div>{t("authentication_security")}</div>
