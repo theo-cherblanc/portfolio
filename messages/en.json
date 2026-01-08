@@ -123,6 +123,19 @@
         "skills_soft": "Soft Skills",
         "all_projects": "all projects"
     },
+    "Contact": {
+        "me": "",
+        "contact_me": "contact me",
+        "description": "Do you have a web project, a task, or an idea you want to bring to life? Describe your needs in this form: context, goals, deadlines…\nI will get back to you quickly.",
+        "name": "Name",
+        "mail": "Email",
+        "message": "Message",
+        "validation": "I agree that my data will only be used to contact me regarding this inquiry.",
+        "send": "send",
+        "sending": "sending",
+        "success": "Message sent",
+        "error": "An error occurred, please try again later."
+    },
     "Footer": {
         "box_title_1": "Do you have an idea or a",
         "box_title_2": "project in mind",

@@ -29,7 +29,7 @@
         },
         {
             "id": 3,
-            "title": "Solvéo",
+            "title": "Solveo",
             "type": "web_app",
             "tags": ["web_app","frontend","backoffice","business_application","react"],
             "stack": ["react", "remix", "tailwind"],
