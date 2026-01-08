@@ -174,23 +174,27 @@ export default async function About({ params }: PageProps<"/[locale]">) {
 
     return (
         <div className="flex min-h-screen items-center justify-center  font-sans ">
-            <main className="flex min-h-screen w-full flex-col items-center justify-between py-32 px-16 max-w-[1250px]">
-                <div className="flex items-center gap-16  mt-32">
+            <main className="flex min-h-screen w-full flex-col items-center justify-between pt-32 lg:py-32 px-16 max-w-[1250px]">
+                <div className="flex flex-col lg:flex-row items-center gap-16 lg:mt-32">
                     <Image
                         src="/pp.png"
-                        width={400}
-                        height={700}
+                        width={1000}
+                        height={1000}
                         alt="profil picture"
-                        className="rounded-xl"
+                        className="rounded-xl w-[200px] lg:w-[400px] lg:h-[700px]"
                     />
-                    <div className="flex flex-col items-start gap-6 ">
+                    <div className="flex flex-col items-start gap-6 w-100 lg:w-full px-12 lg:px-0">
                         <div className="font-title flex-none">
-                            <h1 className="flex flex-col gap-5 items-start">
-                                <div className="text-3xl">{t("title")}</div>
-                                <div className="text-7xl">{t("subtitle")}</div>
+                            <h1 className="flex flex-col gap-2 lg:gap-5 items-start">
+                                <div className="text-xl lg:text-3xl">
+                                    {t("title")}
+                                </div>
+                                <div className="text-5xl lg:text-7xl">
+                                    {t("subtitle")}
+                                </div>
                             </h1>
                         </div>
-                        <div className="text-xl max-w-xl whitespace-pre-line flex flex-col gap-8">
+                        <div className="text-lg lg:text-xl max-w-xl whitespace-pre-line flex flex-col gap-4 lg:gap-8">
                             <p>{t("description1")}</p>
                             <p>{t("description2")}</p>
                             <p>{t("description3")}</p>
@@ -200,37 +204,41 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                 <div className="flex items-center my-12">
                     <Button label="Mon CV" />
                 </div>
-                <div className="flex flex-col items-start gap-6 w-full mt-32">
+                <div className="flex flex-col items-start gap-6 w-100 lg:w-full mt-24 lg:mt-32 px-12 lg:px-0">
                     <div className="font-title">
                         <h1 className="flex flex-col gap-5 items-start">
-                            <div className="text-3xl">{t("stack")}</div>
-                            <div className="text-6xl">{t("skills")}</div>
+                            <div className="text-2xl lg:text-3xl">
+                                {t("stack")}
+                            </div>
+                            <div className="text-5xl lg:text-6xl">
+                                {t("skills")}
+                            </div>
                         </h1>
                     </div>
                     <h2 className="text-lg max-w-xl">{t("stack_desc")}</h2>
                 </div>
-                <div className="w-full flex flex-col gap-12 mt-16">
+                <div className="w-100 lg:w-full flex flex-col gap-12 mt-16 px-6 lg:px-0">
                     {skills.map((el) => (
                         <div
                             key={el.title}
-                            className="bg-background-tertiary rounded-xl p-16"
+                            className="bg-background-tertiary rounded-xl p-8 lg:p-16"
                         >
-                            <h2 className="font-title text-xl">
+                            <h2 className="font-title text-xl text-center lg:text-start">
                                 {t(el.title)}
                             </h2>
-                            <div className="grid grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] mt-8 ">
+                            <div className="grid grid-cols-2 lg:grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] mt-8 ">
                                 {el.items.map((el) => {
                                     const Icon = el.icon;
                                     return (
                                         <div
                                             key={el.name}
-                                            className="flex  gap-4 items-center"
+                                            className="flex flex-col lg:flex-row gap-4 items-center"
                                         >
                                             <div className="flex justify-center items-center bg-foreground text-background w-16 h-16 rounded-2xl">
                                                 <Icon className="h-10 w-10" />
                                             </div>
-                                            <div className="flex flex-col items-between">
-                                                <div className="font-title">
+                                            <div className="flex flex-col items-center lg:items-start">
+                                                <div className="font-title text-center">
                                                     {el.name}
                                                 </div>
                                                 <div>{el.description}</div>

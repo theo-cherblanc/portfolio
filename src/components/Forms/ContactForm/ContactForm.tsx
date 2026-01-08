@@ -54,20 +54,20 @@ export default function ContactForm({ label }: ContactFormProps) {
     return (
         <form onSubmit={handleSubmit} className="space-y-6 w-full">
             <Toaster richColors position="top-right" />
-            <div className="flex gap-6">
+            <div className="flex flex-col lg:flex-row gap-6">
                 <input
                     type="text"
                     name="name"
                     placeholder={label.name}
                     required
-                    className="border p-4 w-2/3 rounded-xl text-foreground"
+                    className="border p-4 lg:w-2/3 rounded-xl text-foreground"
                 />
                 <input
                     type="email"
                     name="email"
                     placeholder={label.mail}
                     required
-                    className="border p-4 w-2/3 rounded-xl text-foreground"
+                    className="border p-4 lg:w-2/3 rounded-xl text-foreground"
                 />
             </div>
 
