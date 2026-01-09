@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import NavBar from "@/src/components/NavBar/NavBar";
 import Footer from "@/src/components/Footer/Footer";
+import LenisProvider from "@/src/providers/LenisProvider";
 
 // export const metadata: Metadata = {
 //     title: "Theo CHERBLANC - Developer web",
@@ -40,11 +41,13 @@ export default async function LocaleLayout({ children, params }: Props) {
     return (
         <html lang={locale}>
             <body>
-                <NextIntlClientProvider>
-                    <NavBar />
-                    {children}
-                    <Footer />
-                </NextIntlClientProvider>
+                <LenisProvider>
+                    <NextIntlClientProvider>
+                        <NavBar />
+                        {children}
+                        <Footer />
+                    </NextIntlClientProvider>
+                </LenisProvider>
             </body>
         </html>
     );

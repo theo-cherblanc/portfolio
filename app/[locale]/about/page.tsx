@@ -26,6 +26,8 @@ import TerminalIcon from "@/src/assets/terminal.svg";
 import ToolsIcon from "@/src/assets/tools.svg";
 import WebappIcon from "@/src/assets/webapp.svg";
 import TailwindIcon from "@/src/assets/tailwind.svg";
+import FadeInOnLoad from "@/src/components/Animations/FadeInOnLoad";
+import FadeIn from "@/src/components/Animations/FadeIn";
 
 export default async function About({ params }: PageProps<"/[locale]">) {
     const { locale } = await params;
@@ -176,56 +178,82 @@ export default async function About({ params }: PageProps<"/[locale]">) {
         <div className="flex min-h-screen items-center justify-center  font-sans ">
             <main className="flex min-h-screen w-full flex-col items-center justify-between pt-32 lg:py-32 px-16 max-w-[1250px]">
                 <div className="flex flex-col lg:flex-row items-center gap-16 lg:mt-32">
-                    <Image
-                        src="/pp.png"
-                        width={1000}
-                        height={1000}
-                        alt="profil picture"
-                        className="rounded-xl w-[200px] lg:w-[400px] lg:h-[700px]"
-                    />
-                    <div className="flex flex-col items-start gap-6 w-100 lg:w-full px-12 lg:px-0">
+                    <FadeInOnLoad
+                        delay={0.2}
+                        rotate={0}
+                        y={64}
+                        className="w-full flex flex-col items-center"
+                    >
+                        <Image
+                            src="/pp.png"
+                            width={1000}
+                            height={1000}
+                            alt="profil picture"
+                            className="rounded-xl w-[200px] md:w-[300px] lg:w-[400px] lg:h-[700px]"
+                        />
+                    </FadeInOnLoad>
+                    <div className="flex flex-col items-start gap-6 w-100 md:w-full px-12 lg:px-0">
                         <div className="font-title flex-none">
                             <h1 className="flex flex-col gap-2 lg:gap-5 items-start">
-                                <div className="text-xl lg:text-3xl">
-                                    {t("title")}
-                                </div>
-                                <div className="text-5xl lg:text-7xl">
-                                    {t("subtitle")}
-                                </div>
+                                <FadeInOnLoad delay={0.5}>
+                                    <div className="text-xl lg:text-3xl">
+                                        {t("title")}
+                                    </div>
+                                </FadeInOnLoad>
+                                <FadeInOnLoad delay={0.7}>
+                                    <div className="text-5xl lg:text-7xl">
+                                        {t("subtitle")}
+                                    </div>
+                                </FadeInOnLoad>
                             </h1>
                         </div>
                         <div className="text-lg lg:text-xl max-w-xl whitespace-pre-line flex flex-col gap-4 lg:gap-8">
-                            <p>{t("description1")}</p>
-                            <p>{t("description2")}</p>
-                            <p>{t("description3")}</p>
+                            <FadeInOnLoad delay={0.8} rotate={0}>
+                                <p>{t("description1")}</p>
+                            </FadeInOnLoad>{" "}
+                            <FadeInOnLoad delay={0.9} rotate={0}>
+                                <p>{t("description2")}</p>
+                            </FadeInOnLoad>
+                            <FadeInOnLoad delay={1} rotate={0}>
+                                <p>{t("description3")}</p>
+                            </FadeInOnLoad>
                         </div>
                     </div>
                 </div>
                 <div className="flex items-center my-12">
                     <Button label="Mon CV" />
                 </div>
-                <div className="flex flex-col items-start gap-6 w-100 lg:w-full mt-24 lg:mt-32 px-12 lg:px-0">
+                <div className="flex flex-col items-start gap-6 w-100 md:w-full mt-24 lg:mt-32 px-12 lg:px-0">
                     <div className="font-title">
                         <h1 className="flex flex-col gap-5 items-start">
-                            <div className="text-2xl lg:text-3xl">
-                                {t("stack")}
-                            </div>
-                            <div className="text-5xl lg:text-6xl">
-                                {t("skills")}
-                            </div>
+                            <FadeIn>
+                                <div className="text-2xl lg:text-3xl">
+                                    {t("stack")}
+                                </div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div className="text-5xl lg:text-6xl">
+                                    {t("skills")}
+                                </div>
+                            </FadeIn>
                         </h1>
                     </div>
-                    <h2 className="text-lg max-w-xl">{t("stack_desc")}</h2>
+                    <FadeIn rotate={0}>
+                        <h2 className="text-lg max-w-xl">{t("stack_desc")}</h2>
+                    </FadeIn>
                 </div>
-                <div className="w-100 lg:w-full flex flex-col gap-12 mt-16 px-6 lg:px-0">
+                <div className="w-100 md:w-full flex flex-col gap-12 mt-16 px-6 lg:px-0">
                     {skills.map((el) => (
-                        <div
+                        <FadeIn
                             key={el.title}
                             className="bg-background-tertiary rounded-xl p-8 lg:p-16"
                         >
-                            <h2 className="font-title text-xl text-center lg:text-start">
-                                {t(el.title)}
-                            </h2>
+                            <FadeIn delay={0.7}>
+                                <h2 className="font-title text-xl text-center lg:text-start">
+                                    {t(el.title)}
+                                </h2>
+                            </FadeIn>
+
                             <div className="grid grid-cols-2 lg:grid-cols-3 w-full gap-8 opacity-100 max-w-[1250px] mt-8 ">
                                 {el.items.map((el) => {
                                     const Icon = el.icon;
@@ -234,20 +262,26 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                                             key={el.name}
                                             className="flex flex-col lg:flex-row gap-4 items-center"
                                         >
-                                            <div className="flex justify-center items-center bg-foreground text-background w-16 h-16 rounded-2xl">
-                                                <Icon className="h-10 w-10" />
-                                            </div>
-                                            <div className="flex flex-col items-center lg:items-start">
-                                                <div className="font-title text-center">
-                                                    {el.name}
+                                            <FadeIn delay={0.7}>
+                                                <div className="flex justify-center items-center bg-foreground text-background w-16 h-16 rounded-2xl">
+                                                    <Icon className="h-10 w-10" />
                                                 </div>
-                                                <div>{el.description}</div>
+                                            </FadeIn>
+                                            <div className="flex flex-col items-center lg:items-start">
+                                                <FadeIn delay={0.9}>
+                                                    <div className="font-title text-center">
+                                                        {el.name}
+                                                    </div>
+                                                </FadeIn>
+                                                <FadeIn delay={1.1}>
+                                                    <div>{el.description}</div>
+                                                </FadeIn>
                                             </div>
                                         </div>
                                     );
                                 })}
                             </div>
-                        </div>
+                        </FadeIn>
                     ))}
                 </div>
                 <div className="flex items-center my-12">

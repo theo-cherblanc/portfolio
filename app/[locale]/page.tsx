@@ -6,6 +6,10 @@ import LogoIcon from "@/src/assets/icon.svg";
 import ProjectCard from "@/src/components/Cards/ProjectCard/ProjectCard";
 import Button from "@/src/components/Buttons/Button";
 import projectData from "@/src/data/projects.json";
+import FadeIn from "@/src/components/Animations/FadeIn";
+import FadeInGrid from "@/src/components/Animations/FadeInGrid";
+import FadeInOnLoad from "@/src/components/Animations/FadeInOnLoad";
+import { ParallaxY } from "@/src/components/Animations/ParallaxY";
 
 export default async function Home({ params }: PageProps<"/[locale]">) {
     const { locale } = await params;
@@ -22,56 +26,84 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                     <div className="flex flex-col items-center lg:items-start gap-6 mt-12 lg:mt-0">
                         <div className="font-title flex-none">
                             <h1 className="flex flex-col lg:gap-5 items-center lg:items-start">
-                                <div className=" text-3xl lg:text-3xl text-center lg:text-start">
-                                    {t("title")}
-                                </div>
-                                <div className="text-5xl lg:text-7xl text-center lg:text-start">
-                                    Theo Cherblanc
-                                </div>
+                                <FadeInOnLoad delay={0.5}>
+                                    <div className=" text-3xl lg:text-3xl text-center lg:text-start">
+                                        {t("title")}
+                                    </div>
+                                </FadeInOnLoad>
+                                <FadeInOnLoad delay={0.7}>
+                                    <div className="text-5xl lg:text-7xl text-center lg:text-start">
+                                        Theo Cherblanc
+                                    </div>
+                                </FadeInOnLoad>
                             </h1>
                         </div>
-                        <h2 className="text-lg lg:text-2xl text-center lg:text-start max-w-xl">
-                            {t("subtitle")}
-                        </h2>
+                        <FadeInOnLoad delay={0.9}>
+                            <h2 className="text-lg lg:text-2xl text-center lg:text-start max-w-xl">
+                                {t("subtitle")}
+                            </h2>
+                        </FadeInOnLoad>
                         <div className="flex items-center justify-between w-full">
                             <div className="flex flex-col lg:flex-row items-center gap-5">
-                                <div className="flex justify-center items-center text-4xl bg-background-secondary text-white rounded-lg w-15 h-15">
-                                    10
-                                </div>
-                                <div className="text-lg lg:text-xl">
-                                    {t("completed_projects")}
-                                </div>
+                                <FadeInOnLoad delay={1}>
+                                    <div className="flex justify-center items-center text-4xl bg-background-secondary text-white rounded-lg w-15 h-15">
+                                        10
+                                    </div>
+                                </FadeInOnLoad>
+                                <FadeInOnLoad delay={1.2}>
+                                    <div className="text-lg lg:text-xl">
+                                        {t("completed_projects")}
+                                    </div>
+                                </FadeInOnLoad>
                             </div>
                             <div className="flex flex-col lg:flex-row items-center gap-5">
-                                <div className="flex justify-center items-center text-4xl bg-background-secondary text-white rounded-lg w-15 h-15">
-                                    5
-                                </div>
-                                <div className="text-lg lg:text-xl">
-                                    {t("years_experience")}
-                                </div>
+                                <FadeInOnLoad delay={1}>
+                                    <div className="flex justify-center items-center text-4xl bg-background-secondary text-white rounded-lg w-15 h-15">
+                                        5
+                                    </div>
+                                </FadeInOnLoad>
+                                <FadeInOnLoad delay={1.2}>
+                                    <div className="text-lg lg:text-xl">
+                                        {t("years_experience")}
+                                    </div>
+                                </FadeInOnLoad>
                             </div>
                         </div>
                     </div>
-                    <div className="relative w-[350px] h-350px]  flex lg:hidden items-center justify-center mt-6 lg:mt-0">
-                        <div className="absolute bg-white rounded-full w-[300px] h-[300px] z-1"></div>
-                        <LogoIcon className="text-black z-2" />
-                    </div>
-                    <div className="relative w-[350px] h-[35Opx] lg:w-[1000px] lg:h-[1000px] hidden lg:flex items-center justify-center">
-                        <div className="absolute bg-white rounded-full w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] z-1"></div>
-                        <Image
-                            src="icon.gif"
-                            alt="Ball animation"
-                            width={2000}
-                            height={2000}
-                            unoptimized
-                            className="z-2"
-                        />
-                    </div>
+                    <FadeInOnLoad delay={0.2} rotate={0} y={64}>
+                        <div className="relative w-[350px] h-350px]  flex lg:hidden items-center justify-center mt-6 lg:mt-0">
+                            <div className="absolute bg-white rounded-full w-[300px] h-[300px] z-1"></div>
+                            <LogoIcon className="text-black z-2" />
+                        </div>
+                    </FadeInOnLoad>
+                    <FadeInOnLoad delay={0.2} rotate={0} y={64}>
+                        <div className="relative w-[350px] h-[35Opx] lg:w-[500px] lg:h-[500px] xl:w-[800px] xl:h-[800px] hidden lg:flex items-center justify-center">
+                            <div className="absolute bg-white rounded-full w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] xl:w-[550px] xl:h-[550px] z-1"></div>
+
+                            <Image
+                                src="icon.gif"
+                                alt="Ball animation"
+                                width={2000}
+                                height={2000}
+                                unoptimized
+                                className="z-2"
+                            />
+                        </div>
+                    </FadeInOnLoad>
                 </div>
-                <div className="font-title text-5xl lg:text-6xl mb-14 lg:mb-24 lg:mt-0 mt-20">
-                    {tc("projects")}
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 max-w-[1250px] mb-12 lg:mb-24 px-6 lg:px-0">
+                <FadeIn>
+                    <div className="font-title text-5xl lg:text-6xl mb-14 lg:mb-24 lg:mt-32 xl:mt-64 mt-20">
+                        {tc("projects")}
+                    </div>
+                </FadeIn>
+
+                <FadeInGrid
+                    className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 max-w-[1250px] mb-12 lg:mb-24 px-6 lg:px-0"
+                    y={50}
+                    rotate={-8}
+                    duration={0.5}
+                    stagger={0.2}
+                >
                     {projectData.projects.slice(0, 3).map((el) => (
                         <ProjectCard
                             title={el.title}
@@ -81,64 +113,108 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                             href={`/${locale}/projects/${el.id}`}
                         />
                     ))}
-                </div>
+                </FadeInGrid>
+
                 <Button
                     label={t("all_projects")}
                     href={`/${locale}/projects`}
                 />
+
                 <div className="mt-32 lg:mt-64 flex flex-col items-start gap-12 max-w-[1250px] w-full ">
                     <div className="font-title flex-none">
                         <h1 className="flex flex-col gap-3 items-start">
-                            <div className="text-3xl lg:text-3xl">
-                                {t("need")}
-                            </div>
-                            <div className="text-6xl lg:text-7xl">
-                                {t("interface")} ?
-                            </div>
+                            <FadeIn>
+                                <div className="text-3xl lg:text-3xl">
+                                    {t("need")}
+                                </div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div className="text-6xl lg:text-7xl">
+                                    {t("interface")} ?
+                                </div>
+                            </FadeIn>
                         </h1>
                     </div>
-                    <h2 className="text-xl lg:text-2xl max-w-xl">
-                        {t("service_desc")}
-                    </h2>
+                    <FadeIn>
+                        <h2 className="text-xl lg:text-2xl max-w-xl">
+                            {t("service_desc")}
+                        </h2>
+                    </FadeIn>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 opacity-100 max-w-[1250px] px-6 lg:px-0 mb-12 mt-24 lg:my-24">
+                <FadeInGrid className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 opacity-100 max-w-[1250px] px-6 lg:px-0 mb-12 mt-24 lg:my-24">
                     <div className="flex flex-col items-center gap-4 bg-background-tertiary py-12 px-4 rounded-xl">
-                        <div>logo</div>
-                        <div className="text-center text-3xl font-title">
-                            {t("crafting_interactive_interfaces")}
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <div>{t("responsive_designs")}</div>
-                            <div>{t("animations_micro_interactions")}</div>
-                            <div>{t("accessibility_approach")}</div>
-                            <div>React / Vue.Js / React Frameworks</div>
+                        <FadeIn>
+                            <div>logo</div>
+                        </FadeIn>
+                        <FadeIn delay={0.1}>
+                            <div className="text-center text-3xl font-title">
+                                {t("crafting_interactive_interfaces")}
+                            </div>
+                        </FadeIn>
+                        <div className="flex flex-col gap-2 text-center">
+                            <FadeIn>
+                                <div>{t("responsive_designs")}</div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div>{t("animations_micro_interactions")}</div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div>{t("accessibility_approach")}</div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div>React / Vue.Js / React Frameworks</div>
+                            </FadeIn>
                         </div>
                     </div>
                     <div className="flex flex-col items-center gap-4 bg-background-tertiary py-12 px-4 rounded-xl">
-                        <div>logo</div>
-                        <div className="text-center text-3xl font-title">
-                            {t("application_pwa")}
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <div>{t("offline_fast")}</div>
-                            <div>{t("push_notifications")}</div>
-                            <div>{t("cross_platform")}</div>
-                            <div>Ionic / Capacitor / React</div>
+                        <FadeIn>
+                            <div>logo</div>
+                        </FadeIn>
+                        <FadeIn delay={0.1}>
+                            <div className="text-center text-3xl font-title">
+                                {t("application_pwa")}
+                            </div>
+                        </FadeIn>
+                        <div className="flex flex-col gap-2 text-center">
+                            <FadeIn>
+                                <div>{t("offline_fast")}</div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div>{t("push_notifications")}</div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div>{t("cross_platform")}</div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div>Ionic / Capacitor / React</div>
+                            </FadeIn>
                         </div>
                     </div>
                     <div className="flex flex-col items-center gap-4 bg-background-tertiary py-12 px-4 rounded-xl">
-                        <div>logo</div>
-                        <div className="text-center text-3xl font-title">
-                            {t("back_end")}
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <div>{t("api_microservices")}</div>
-                            <div>{t("database_design")}</div>
-                            <div>{t("authentication_security")}</div>
-                            <div>Node.js / Javascript / SQL</div>
+                        <FadeIn>
+                            <div>logo</div>
+                        </FadeIn>
+                        <FadeIn delay={0.1}>
+                            <div className="text-center text-3xl font-title">
+                                {t("back_end")}
+                            </div>
+                        </FadeIn>
+                        <div className="flex flex-col gap-2 text-center">
+                            <FadeIn>
+                                <div>{t("api_microservices")}</div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div>{t("database_design")}</div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div>{t("authentication_security")}</div>
+                            </FadeIn>
+                            <FadeIn>
+                                <div>Node.js / Javascript / SQL</div>
+                            </FadeIn>
                         </div>
                     </div>
-                </div>
+                </FadeInGrid>
                 <Button label={t("about_me")} />
             </main>
         </div>

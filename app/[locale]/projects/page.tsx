@@ -8,6 +8,9 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { routing } from "@/src/i18n/routing";
 import ProjectData from "@/src/data/projects.json";
+import FadeInOnLoad from "@/src/components/Animations/FadeInOnLoad";
+import FadeInGrid from "@/src/components/Animations/FadeInGrid";
+
 type Props = {
     children: React.ReactNode;
     params: Promise<{ locale: string }>;
@@ -39,24 +42,38 @@ export default async function Projects({ params }: PageProps<"/[locale]">) {
                     <div className="flex flex-col items-start gap-6 ">
                         <div className="font-title flex-none">
                             <h1 className="flex flex-col lg:gap-2 items-start">
-                                <div className="text-3xl lg:text-5xl">
-                                    {t("my")}
-                                </div>
-                                <div className="text-5xl lg:text-8xl">
-                                    {t("projects")}
-                                </div>
+                                <FadeInOnLoad delay={0.5}>
+                                    <div className="text-3xl lg:text-5xl">
+                                        {t("my")}
+                                    </div>
+                                </FadeInOnLoad>
+                                <FadeInOnLoad delay={0.7}>
+                                    <div className="text-5xl lg:text-8xl">
+                                        {t("projects")}
+                                    </div>
+                                </FadeInOnLoad>
                             </h1>
                         </div>
-                        <h2 className="text-lg lg:text-2xl max-w-xl">
-                            {t("subtitle")}
-                        </h2>
+                        <FadeInOnLoad delay={0.9}>
+                            <h2 className="text-lg lg:text-2xl max-w-xl">
+                                {t("subtitle")}
+                            </h2>
+                        </FadeInOnLoad>
                     </div>
-                    <div className="relative w-[350px] h-[350px] lg:w-[600px] lg:h-600px] flex items-center justify-center">
-                        <div className="absolute bg-white rounded-lg w-[300px] h-[300px] z-1"></div>
-                        <LogoIcon className="text-black z-2" />
-                    </div>
+                    <FadeInOnLoad delay={0.2} rotate={0} y={64}>
+                        <div className="relative w-[350px] h-[350px] lg:w-[350px] lg:h-[350px] xl:w-[600px] xl:h-[600px] flex items-center justify-center">
+                            <div className="absolute bg-white rounded-lg w-[300px] h-[300px] xl:w-[600px] xl:h-[400px] z-1"></div>
+                            <LogoIcon className="text-black z-2" />
+                        </div>
+                    </FadeInOnLoad>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 opacity-100 max-w-[1250px]  mt-32 px-6 lg:px-0">
+                <FadeInGrid
+                    className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 opacity-100 max-w-[1250px]  mt-32 px-6 lg:px-0"
+                    y={50}
+                    rotate={-8}
+                    duration={0.5}
+                    stagger={0.2}
+                >
                     {ProjectData.projects.map((el) => (
                         <ProjectCard
                             title={el.title}
@@ -66,7 +83,7 @@ export default async function Projects({ params }: PageProps<"/[locale]">) {
                             href={`/${locale}/projects/${el.id}`}
                         />
                     ))}
-                </div>
+                </FadeInGrid>
             </main>
         </div>
     );
