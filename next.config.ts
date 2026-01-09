@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";;
-
+import { routing } from "./src/i18n/routing"; 
 const nextConfig: NextConfig = {
   turbopack: {
     rules: {
@@ -9,6 +9,14 @@ const nextConfig: NextConfig = {
         as: '*.js',
       },
     },
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: `/${routing.defaultLocale}`,
+      },
+    ];
   },
 };
 
