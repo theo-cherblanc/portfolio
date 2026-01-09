@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Button from "../../Buttons/Button";
 import { toast, Toaster } from "sonner";
+import FadeInOnLoad from "../../Animations/FadeInOnLoad";
 
 type ContactFormProps = {
     label: {
@@ -54,7 +55,11 @@ export default function ContactForm({ label }: ContactFormProps) {
     return (
         <form onSubmit={handleSubmit} className="space-y-6 w-full">
             <Toaster richColors position="top-right" />
-            <div className="flex flex-col lg:flex-row gap-6">
+            <FadeInOnLoad
+                className="flex flex-col lg:flex-row gap-6"
+                rotate={0}
+                delay={0.6}
+            >
                 <input
                     type="text"
                     name="name"
@@ -69,29 +74,31 @@ export default function ContactForm({ label }: ContactFormProps) {
                     required
                     className="border p-4 lg:w-2/3 rounded-xl text-foreground"
                 />
-            </div>
-
-            <textarea
-                name="message"
-                placeholder={label.message}
-                rows={5}
-                required
-                className="border p-4 w-full rounded-xl text-foreground"
-            />
-
-            <div className="flex items-start gap-3">
-                <input
-                    type="checkbox"
-                    name="consent"
-                    id="consent"
+            </FadeInOnLoad>
+            <FadeInOnLoad rotate={0} delay={0.8}>
+                <textarea
+                    name="message"
+                    placeholder={label.message}
+                    rows={5}
                     required
-                    className="mt-1 accent-primary"
+                    className="border p-4 w-full rounded-xl text-foreground"
                 />
+            </FadeInOnLoad>
+            <FadeInOnLoad rotate={0} delay={1}>
+                <div className="flex items-start gap-3">
+                    <input
+                        type="checkbox"
+                        name="consent"
+                        id="consent"
+                        required
+                        className="mt-1 accent-primary"
+                    />
 
-                <label htmlFor="consent" className="">
-                    {label.validation}
-                </label>
-            </div>
+                    <label htmlFor="consent" className="">
+                        {label.validation}
+                    </label>
+                </div>
+            </FadeInOnLoad>
 
             <input type="text" name="_gotcha" className="hidden" />
             <div className="flex justify-center">

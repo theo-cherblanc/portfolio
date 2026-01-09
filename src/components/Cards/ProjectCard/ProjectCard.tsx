@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Icon from "@/src/assets/icon_small.svg";
 import Link from "next/link";
+import FadeIn from "../../Animations/FadeIn";
 
 type ProjectCardProps = {
     title: string;
@@ -31,11 +32,14 @@ export default function ProjectCard({
             />
             <div className="p-3">
                 <div className="text-2xl mb-4 font-title">{title}</div>
-                <div className="flex gap-3 gap-y-1 flex-wrap text-sm capitalize">
-                    {tags.map((el) => (
-                        <div key={el}>{t(el)}</div>
-                    ))}
-                </div>
+
+                <FadeIn delay={0.3}>
+                    <div className="flex gap-3 gap-y-1 flex-wrap text-sm capitalize">
+                        {tags.map((el) => (
+                            <div key={el}>{t(el)}</div>
+                        ))}
+                    </div>
+                </FadeIn>
             </div>
         </Link>
     );
