@@ -1,10 +1,7 @@
-import LocaleSwitcher from "@/src/components/Switchers/LocaleSwitcher";
 import { Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import Image from "next/image";
-import LogoIcon from "@/src/assets/icon.svg";
+
 import ProjectCard from "@/src/components/Cards/ProjectCard/ProjectCard";
-import Button from "@/src/components/Buttons/Button";
 import projectsData from "@/src/data/projects.json";
 import ReactIcon from "@/src/assets/react.svg";
 import RemixIcon from "@/src/assets/remix.svg";
@@ -137,11 +134,12 @@ export default async function Project({
                                 })}
                             </div>
                         </FadeIn>
-                        <FadeIn delay={0.4} rotate={0}>
-                            <div className="font-bold text-xl capitalize mt-12">
+
+                        <div className="font-bold text-xl capitalize mt-12">
+                            <FadeIn delay={0.4} rotate={0}>
                                 {t(project?.part || "")} / {project?.job}
-                            </div>
-                        </FadeIn>
+                            </FadeIn>
+                        </div>
                     </div>
                 </div>
 

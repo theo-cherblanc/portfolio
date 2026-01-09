@@ -1,8 +1,6 @@
 import { hasLocale, Locale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import Image from "next/image";
 import ProjectCard from "@/src/components/Cards/ProjectCard/ProjectCard";
-import Button from "@/src/components/Buttons/Button";
 import LogoIcon from "@/src/assets/icon.svg";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";

@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 
 import Image from "next/image";
-import Icon from "@/src/assets/icon_small.svg";
+
 import Link from "next/link";
 import FadeIn from "../../Animations/FadeIn";
 
@@ -21,7 +21,10 @@ export default function ProjectCard({
     const t = useTranslations("Project");
 
     return (
-        <Link className="bg-background-tertiary p-3 rounded-xl" href={href}>
+        <Link
+            className="bg-background-tertiary p-3 rounded-xl transition-transform duration-200 ease-out hover:scale-105"
+            href={href}
+        >
             <Image
                 width={400}
                 height={600}

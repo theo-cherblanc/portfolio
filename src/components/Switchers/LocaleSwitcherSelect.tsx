@@ -37,7 +37,7 @@ export default function LocaleSwitcherSelect({ items, defaultValue }: Props) {
                     onClick={() => handleChange(el.value)}
                     disabled={isPending}
                     className={clsx(
-                        "capitalize p-2 rounded-lg transform ",
+                        "capitalize p-2 rounded-lg transform transition-transform duration-200 ease-out hover:scale-105",
                         defaultValue === el.value
                             ? "bg-foreground text-background"
                             : "transition-transform duration-200 hover:scale-105"

@@ -103,6 +103,7 @@ export default function ContactForm({ label }: ContactFormProps) {
             <input type="text" name="_gotcha" className="hidden" />
             <div className="flex justify-center">
                 <Button
+                    className="transition-transform duration-200 ease-out hover:scale-105"
                     type="submit"
                     disabled={status === "sending"}
                     label={

@@ -37,6 +37,7 @@ export default function Footer() {
                         label={t("contact_me")}
                         variant="secondary"
                         href={`/${locale}/contact`}
+                        className="transition-transform duration-200 ease-out hover:scale-105"
                     />
                 </div>
             </FadeIn>

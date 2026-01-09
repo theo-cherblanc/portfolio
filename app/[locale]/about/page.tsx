@@ -221,7 +221,10 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                     </div>
                 </div>
                 <div className="flex items-center my-12">
-                    <Button label="Mon CV" />
+                    <Button
+                        label="Mon CV"
+                        className="transition-transform duration-200 ease-out hover:scale-105"
+                    />
                 </div>
                 <div className="flex flex-col items-start gap-6 w-100 md:w-full mt-24 lg:mt-32 px-12 lg:px-0">
                     <div className="font-title">
@@ -288,6 +291,7 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                     <Button
                         label={t("all_projects")}
                         href={`/${locale}/projects`}
+                        className="transition-transform duration-200 ease-out hover:scale-105"
                     />
                 </div>
             </main>
