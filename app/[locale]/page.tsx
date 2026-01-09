@@ -118,6 +118,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                 <Button
                     label={t("all_projects")}
                     href={`/${locale}/projects`}
+                    className="transition-transform duration-200 ease-out hover:scale-105"
                 />
 
                 <div className="mt-32 lg:mt-64 flex flex-col items-start gap-12 max-w-[1250px] w-full ">
@@ -215,7 +216,10 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                         </div>
                     </div>
                 </FadeInGrid>
-                <Button label={t("about_me")} />
+                <Button
+                    label={t("about_me")}
+                    className="transition-transform duration-200 ease-out hover:scale-105"
+                />
             </main>
         </div>
     );

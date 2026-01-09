@@ -27,6 +27,7 @@ export default function ThemeSwitcher() {
             onClick={() => setIsDark(!isDark)}
             className={clsx(
                 "ThemeSwitcher",
+                "transition-transform duration-200 ease-out hover:scale-105",
                 isDark ? "ThemeSwitcher_switched" : ""
             )}
         >

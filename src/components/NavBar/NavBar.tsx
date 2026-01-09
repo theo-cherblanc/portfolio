@@ -22,7 +22,7 @@ export default function NavBar() {
                     <FadeInOnLoad className="flex">
                         <Link
                             href={`/${locale}`}
-                            className="bg-primary rounded-lg p-2"
+                            className="bg-primary rounded-lg p-2 transition-transform duration-200 ease-out hover:scale-105"
                         >
                             <Icon className="w-11 h-11 lg:w-16 lg:h-16 text-black" />
                         </Link>
@@ -31,7 +31,7 @@ export default function NavBar() {
                     <FadeInOnLoad delay={0.1}>
                         <Link
                             href={`/${locale}/projects`}
-                            className="hidden lg:flex"
+                            className="hidden lg:flex transition-transform duration-200 ease-out hover:scale-105"
                         >
                             {t("projects")}
                         </Link>
@@ -40,7 +40,7 @@ export default function NavBar() {
                     <FadeInOnLoad delay={0.2}>
                         <Link
                             href={`/${locale}/about`}
-                            className="hidden lg:flex"
+                            className="hidden lg:flex transition-transform duration-200 ease-out hover:scale-105"
                         >
                             {t("about")}
                         </Link>
@@ -49,7 +49,7 @@ export default function NavBar() {
                     <FadeInOnLoad delay={0.3}>
                         <Link
                             href={`/${locale}/contact`}
-                            className="hidden lg:flex"
+                            className="hidden lg:flex transition-transform duration-200 ease-out hover:scale-105"
                         >
                             {t("contact")}
                         </Link>
