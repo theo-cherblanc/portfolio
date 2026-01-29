@@ -140,7 +140,29 @@
         "box_title_1": "Do you have an idea or a",
         "box_title_2": "project in mind",
         "box_desc": "Take the first step today.",
-        "contact_me": "contact me"
+        "contact_me": "contact me",
+        "right": " © 2025 All rights reserved. Code by Theo CHERBLANC",
+        "mentions": "Legal Information"
+        
+    },
+    "Mentions": {
+        "legal": "legal",
+        "notice": "notice",
+        "publisher": "website publisher",
+        "hosting": "hosting",
+        "intellectual_property": "intellectual property",
+        "intellectual_property_text": "All content on this website (texts, images, projects, logos, illustrations, source code, etc.) is the exclusive property of Theo Cherblanc, unless otherwise stated.\n\nAny reproduction, distribution, modification or use of this content without prior written permission is strictly prohibited.",
+        "cookies": "Cookies & Analytics",
+        "cookies_text": "This website uses analytics tools to measure traffic and improve user experience.\n\nThese tools may use cookies or similar technologies.\nYou can manage or disable cookies through your browser settings.",
+        "siren_number": "SIREN Number",
+        "name": "name",
+        "address": "Address",
+        "status": "status",
+        "activity":"activity",
+        "phone":"Phone",
+        "email":"Email",
+        "hosted_by": "This website is hosted by :",
+        "website": "Website"
     },
     "Metadata" : {
         "layout_title" : "Theo Cherblanc – Web Developer & Portfolio",

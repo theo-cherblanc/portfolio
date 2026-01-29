@@ -14,6 +14,7 @@ type ButtonProps = {
     href?: string;
     className?: string;
     delay?: number;
+    download?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export default function Button({
@@ -44,7 +45,7 @@ export default function Button({
                         duration: 0.6,
                         delay,
                         ease: "power2.out",
-                    }
+                    },
                 );
 
                 gsap.fromTo(
@@ -56,7 +57,7 @@ export default function Button({
                         duration: 0.3,
                         delay: delay + 0.3,
                         ease: "power2.out",
-                    }
+                    },
                 );
             },
             onLeaveBack: () =>
@@ -73,7 +74,7 @@ export default function Button({
         "font-title rounded-lg py-4 px-6 text-2xl inline-flex items-center justify-center",
         "transform-origin-left overflow-hidden",
         variants[variant],
-        className
+        className,
     );
 
     return (
