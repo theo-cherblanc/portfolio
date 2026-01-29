@@ -10,6 +10,9 @@ import FadeIn from "@/src/components/Animations/FadeIn";
 import FadeInGrid from "@/src/components/Animations/FadeInGrid";
 import FadeInOnLoad from "@/src/components/Animations/FadeInOnLoad";
 import { ParallaxY } from "@/src/components/Animations/ParallaxY";
+import FrontendIcon from "@/src/assets/front-end.svg";
+import PhoneIcon from "@/src/assets/phone.svg";
+import ServerIcon from "@/src/assets/server.svg";
 
 export default async function Home({ params }: PageProps<"/[locale]">) {
     const { locale } = await params;
@@ -145,7 +148,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                 <FadeInGrid className="grid grid-cols-1 lg:grid-cols-3 w-100 lg:w-full gap-8 opacity-100 max-w-[1250px] px-6 lg:px-0 mb-12 mt-24 lg:my-24">
                     <div className="flex flex-col items-center gap-4 bg-background-tertiary py-12 px-4 rounded-xl">
                         <FadeIn>
-                            <div>logo</div>
+                            <FrontendIcon className="w-32 h-32" />
                         </FadeIn>
                         <FadeIn delay={0.1}>
                             <div className="text-center text-3xl font-title">
@@ -169,7 +172,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                     </div>
                     <div className="flex flex-col items-center gap-4 bg-background-tertiary py-12 px-4 rounded-xl">
                         <FadeIn>
-                            <div>logo</div>
+                            <PhoneIcon className="w-32 h-32" />
                         </FadeIn>
                         <FadeIn delay={0.1}>
                             <div className="text-center text-3xl font-title">
@@ -193,7 +196,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                     </div>
                     <div className="flex flex-col items-center gap-4 bg-background-tertiary py-12 px-4 rounded-xl">
                         <FadeIn>
-                            <div>logo</div>
+                            <ServerIcon className="w-32 h-32" />
                         </FadeIn>
                         <FadeIn delay={0.1}>
                             <div className="text-center text-3xl font-title">

@@ -1,13 +1,16 @@
 import { useLocale, useTranslations } from "next-intl";
 import Button from "../Buttons/Button";
 import FadeIn from "../Animations/FadeIn";
+import LinkedinIcon from "@/src/assets/linkedin.svg";
+import MaltIcon from "@/src/assets/malt.svg";
+import Link from "next/link";
 
 export default function Footer() {
     const t = useTranslations("Footer");
     const locale = useLocale();
 
     return (
-        <div className=" my-32 lg:my-64 px-6">
+        <div className=" my-32 lg:mt-64 px-6">
             <FadeIn
                 className="flex items-center justify-center"
                 rotate={0}
@@ -41,6 +44,30 @@ export default function Footer() {
                     />
                 </div>
             </FadeIn>
+            <div className="flex  justify-center w-full mt-32">
+                <div className="max-w-[1250px] w-full flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-0">
+                    <div className="flex gap-6">
+                        <Link
+                            href="https://www.linkedin.com/in/theo-cherblanc-812437193"
+                            target="_blank"
+                        >
+                            <LinkedinIcon className="w-16 h-16" />
+                        </Link>
+                        <Link
+                            href="https://www.malt.fr/profile/theocherblanc"
+                            target="_blank"
+                        >
+                            <MaltIcon className="w-16 h-16" />
+                        </Link>
+                    </div>
+                    <div className="flex flex-col items-center lg:items-end lg:text-lg">
+                        <div className="text-center">{t("right")}</div>
+                        <Link href="mentions" className="font-bold underline">
+                            {t("mentions")}
+                        </Link>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

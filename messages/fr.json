@@ -141,7 +141,28 @@
         "box_title_1": "Vous avez une idee ou un",
         "box_title_2": "projet en tete",
         "box_desc": "Faites le premier pas dès maintenant",
-        "contact_me": "Contactez moi"
+        "contact_me": "Contactez moi",
+        "right": " © 2026 Tous droits réservés. Code par Theo CHERBLANC",
+        "mentions": "Mentions légales"
+    },
+    "Mentions": {
+        "legal": "mentions",
+        "notice": "legales",
+        "publisher": "Editeur du site",
+        "hosting": "Hebergement",
+        "intellectual_property": "Propriete intellectuelle",
+        "intellectual_property_text": "L’ensemble du contenu présent sur ce site (textes, images, projets, logos, illustrations, code, etc.) est la propriété exclusive de Theo Cherblanc, sauf mention contraire.\n\nToute reproduction, représentation, modification, publication ou adaptation, totale ou partielle, du contenu du site, par quelque procédé que ce soit, est interdite sans autorisation écrite préalable.",
+        "cookies": "Cookies et statistiques",
+        "cookies_text": "Ce site utilise des outils de mesure d’audience afin d’analyser le trafic et d’améliorer l’expérience utilisateur.\n\nCes outils peuvent utiliser des cookies ou technologies similaires.\nVous pouvez refuser ou configurer les cookies via les paramètres de votre navigateur.",
+        "siren_number": "Numéro SIREN",
+        "name": "Nom",
+        "address": "Address",
+        "status": "Statut",
+        "activity":"Activité",
+        "phone":"Téléphone",
+        "email":"Email",
+        "hosted_by": "Le site est hébérgé par :",
+        "website": "Site web"
     },
     "Metadata" : {
         "layout_title" : "Theo Cherblanc – Développeur web & portfolio",
