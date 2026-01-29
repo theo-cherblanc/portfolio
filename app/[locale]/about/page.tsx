@@ -222,7 +222,7 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                 </div>
                 <div className="flex items-center my-12">
                     <Button
-                        label="Mon CV"
+                        label={t("cv")}
                         className="transition-transform duration-200 ease-out hover:scale-105"
                         href="/Theo_Cherblanc.pdf"
                         download
