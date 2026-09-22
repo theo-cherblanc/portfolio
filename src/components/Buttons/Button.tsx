@@ -23,6 +23,7 @@ export default function Button({
     href,
     className,
     delay = 0,
+    download,
     ...props
 }: ButtonProps) {
     const wrapperRef = useRef<HTMLDivElement>(null);
@@ -79,7 +80,13 @@ export default function Button({
 
     return (
         <div ref={wrapperRef} className="inline-block">
-            {href ? (
+            {href && download ? (
+                <a href={href} download className={classes}>
+                    <span ref={textRef} className="inline-block">
+                        {label}
+                    </span>
+                </a>
+            ) : href ? (
                 <Link href={href} className={classes}>
                     <span ref={textRef} className="inline-block">
                         {label}
