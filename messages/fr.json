@@ -89,6 +89,8 @@
         "js_ts": "JavaScript / TypeScript",
         "html_css": "HTML5 & CSS3",
         "react": "React",
+        "vue": "Vue.js",
+        "angular": "Angular",
         "ionic_capacitor": "Ionic / Capacitor",
         "next_remix": "Next.js / Remix.js",
         "tailwind": "Tailwind css",

@@ -19,6 +19,8 @@ import JsIcon from "@/src/assets/js.svg";
 import LightIcon from "@/src/assets/light.svg";
 import MobileIcon from "@/src/assets/mobile.svg";
 import ReactIcon from "@/src/assets/react.svg";
+import VueIcon from "@/src/assets/vuejs.svg";
+import AngularIcon from "@/src/assets/angular.svg";
 import RemixIcon from "@/src/assets/remix.svg";
 import ResponsiveIcon from "@/src/assets/responsve.svg";
 import TeamworkIcon from "@/src/assets/teamwork.svg";
@@ -49,6 +51,16 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                     icon: ReactIcon,
                     name: t("react"),
                     description: t("advanced"),
+                },
+                {
+                    icon: VueIcon,
+                    name: t("vue"),
+                    description: t("intermediate"),
+                },
+                {
+                    icon: AngularIcon,
+                    name: t("angular"),
+                    description: t("intermediate"),
                 },
                 {
                     icon: MobileIcon,
@@ -185,11 +197,11 @@ export default async function About({ params }: PageProps<"/[locale]">) {
                         className="w-full flex flex-col items-center"
                     >
                         <Image
-                            src="/pp.png"
-                            width={1000}
-                            height={1000}
+                            src="/pp.jpg"
+                            width={390}
+                            height={682}
                             alt="profil picture"
-                            className="rounded-xl w-[200px] md:w-[300px] lg:w-[400px] lg:h-[700px]"
+                            className="rounded-xl w-[200px] md:w-[300px] lg:w-[400px] h-auto lg:h-[700px] object-cover"
                         />
                     </FadeInOnLoad>
                     <div className="flex flex-col items-start gap-6 w-100 md:w-full px-12 lg:px-0">
